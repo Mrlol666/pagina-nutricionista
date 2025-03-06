@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista - Turnos Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/37d521e806.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a la consulta de [Nombre de tu madre]</h1>
+        <p>Nutricionista Profesional</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#consultorio">Consultorio</a></li>
+            <li><a href="#turnos">Turnos</a></li>
+            <li><a href="#pago">Pago</a></li>
+        </ul>
+    </nav>
+    
+    <section id="informacion">
+        <h2>Sobre mí <i class="fas fa-user-md"></i></h2>
+        <img src="imagenes/nutricionista.jpg" alt="Foto de la nutricionista" class="imagen-redonda">
+        <p>Dirección: [Dirección del consultorio]</p>
+        <p>Teléfono: [Número de celular]</p>
+        <div id="mapa">
+            <h3>Ubicación <i class="fas fa-map-marker-alt"></i></h3>
+            <iframe
+                width="100%"
+                height="300"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=TU_API_KEY&q=[Dirección+del+consultorio]">
+            </iframe>
+        </div>
+    </section>
+    
+    <section id="consultorio">
+        <h2>Consultorio <i class="fas fa-clinic-medical"></i></h2>
+        <img src="imagenes/consultorio.jpg" alt="Foto del consultorio" class="imagen-sombra">
+    </section>
+    
+    <section id="turnos">
+        <h2>Reserva tu turno <i class="far fa-calendar-check"></i></h2>
+        <form id="form-turno">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+            
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" required>
+            
+            <button type="submit">Reservar</button>
+        </form>
+    </section>
+    
+    <section id="pago">
+        <h2>Realiza tu pago <i class="fas fa-credit-card"></i></h2>
+        <div id="boton-mercado-pago"></div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Nutricionista - Todos los derechos reservados</p>
+    </footer>
+    
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
