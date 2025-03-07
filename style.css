@@ -8,8 +8,6 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #8e44ad, #3498db);
-    color: white;
     text-align: center;
     padding: 20px;
     font-size: 28px;
@@ -119,19 +117,4 @@ footer {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-#calendario-turnos h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-#calendario-turnos iframe {
-    width: 100%;
-    height: 600px; /* Ajusta la altura según sea necesario */
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    box-shadow: 0 4px 8px
