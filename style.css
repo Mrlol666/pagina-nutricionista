@@ -12,7 +12,7 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
 }
 
@@ -52,6 +52,23 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 button {
