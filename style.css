@@ -75,6 +75,15 @@ h3 {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Asegura que los elementos estén centrados horizontalmente */
+}
+
+h3 img.logo-pequeno {
+    margin-right: 10px;
+    width: 24px;
+    height: auto;
 }
 
 p {
@@ -167,7 +176,5 @@ footer {
 
     .imagen-redonda {
         width: 100px;
-        height: 100px;
-    }
-}
+        height: 
 
