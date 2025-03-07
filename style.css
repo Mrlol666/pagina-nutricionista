@@ -159,22 +159,5 @@ footer {
 /* Diseño responsive */
 @media (max-width: 768px) {
     header, nav, section, footer {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .banner-img {
-        height: auto;
-    }
-
-    .imagen-redonda {
-        width: 100px;
-        height: 
+        padding: 10px
 
