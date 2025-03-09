@@ -1,6 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f4f8;
+    background-color: #f3f4f6;
     color: #333;
     margin: 0;
     padding: 0;
@@ -8,32 +8,30 @@ body {
 }
 
 header {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 28px;
-    font-weight: 600;
-}
-
-.banner {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    position: relative;
+    padding: 30px 20px;
+    font-size: 32px;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .banner-img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-bottom: 5px solid #8e44ad;
 }
 
 nav {
     background: #5a3d99;
-    padding: 10px;
+    padding: 15px;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -42,64 +40,46 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #dcdde1;
 }
 
 section {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 900px;
+    margin: 30px auto;
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 26px;
+    font-weight: 700;
+    color: #5a3d99;
     margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Asegura que los elementos estén centrados horizontalmente */
-}
-
-h3 img.logo-pequeno {
-    margin-right: 10px;
-    width: 24px;
-    height: auto;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.6;
 }
 
 button {
     background-color: #8e44ad;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 button:hover {
@@ -108,80 +88,79 @@ button:hover {
 
 img {
     width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 12px;
+    margin-top: 15px;
 }
 
 .imagen-redonda {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.imagen-sombra {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Reglas originales para .social-media img movidas a una nueva clase */
+.social-media img, .logo-banco-galicia, .logo-mercado-pago {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover, .logo-banco-galicia:hover, .logo-mercado-pago:hover {
+    transform: scale(1.1);
 }
 
 footer {
     background: #5a3d99;
     color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-/* Estilos personalizados para el calendario de turnos */
-#calendario-turnos {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-#calendario-turnos h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-#calendario-turnos iframe {
-    width: 100%;
-    height: 600px; /* Ajusta la altura según sea necesario */
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Diseño responsive */
-@media (max-width: 768px) {
-    header, nav, section, footer {
-        padding: 10px;
-    }
-}
-
-/* Estilos de las redes sociales */
-.social-media {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.social-media a {
-    margin: 0 10px;
-}
-
-.social-media img {
-    width: 32px;
-    height: 32px;
+/* Nuevas reglas agregadas para ajustar el tamaño de las imágenes */
+.logo-pequeno {
+    width: 32px; /* Tamaño ajustado para que coincida con las otras imágenes */
+    height: 32px; /* Tamaño ajustado para que coincida con las otras imágenes */
     transition: transform 0.3s;
 }
 
-.social-media img:hover {
+.logo-pequeno:hover {
     transform: scale(1.1);
+}
+
+/* Nuevas reglas agregadas para alinear las imágenes y el texto */
+.pago-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 10px; /* Espacio entre la imagen y el texto */
+    text-align: center; /* Centra el texto */
+}
+
+.pago-item img {
+    width: 32px; /* Tamaño ajustado para que coincida con las otras imágenes */
+    height: 32px; /* Tamaño ajustado para que coincida con las otras imágenes */
+    transition: transform 0.3s;
+}
+
+.pago-item img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
    
