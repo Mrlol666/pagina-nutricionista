@@ -100,7 +100,6 @@ img {
     margin-bottom: 15px;
 }
 
-/* Reglas originales para .social-media img movidas a una nueva clase */
 .social-media img, .logo-banco-galicia, .logo-mercado-pago {
     width: 32px;
     height: 32px;
@@ -123,8 +122,8 @@ footer {
 
 /* Nuevas reglas agregadas para ajustar el tamaño de las imágenes */
 .logo-pequeno {
-    width: 32px; /* Tamaño ajustado para que coincida con las otras imágenes */
-    height: 32px; /* Tamaño ajustado para que coincida con las otras imágenes */
+    width: 24px; /* Tamaño ajustado para que sean más pequeñas */
+    height: 24px; /* Tamaño ajustado para que sean más pequeñas */
     transition: transform 0.3s;
 }
 
@@ -133,23 +132,38 @@ footer {
 }
 
 /* Nuevas reglas agregadas para alinear las imágenes y el texto */
+#pago {
+    text-align: center; /* Centra todo el contenido de la sección "Realiza tu Pago" */
+}
+
+#informacion-pago {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .pago-item {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    gap: 10px; /* Espacio entre la imagen y el texto */
-    text-align: center; /* Centra el texto */
+    justify-content: center;
+    gap: 10px; 
+    text-align: center; 
+    margin: 10px 0; /* Espacio entre cada elemento */
 }
 
 .pago-item img {
-    width: 32px; /* Tamaño ajustado para que coincida con las otras imágenes */
-    height: 32px; /* Tamaño ajustado para que coincida con las otras imágenes */
+    width: 24px;
+    height: 24px;
     transition: transform 0.3s;
+    margin-right: 5px; 
+    position: relative;
+    top: -5px; 
 }
 
-.pago-item img:hover {
-    transform: scale(1.1);
-}
+
+
+
+
 
 
 
