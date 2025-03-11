@@ -62,6 +62,7 @@ section {
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h2 {
@@ -100,31 +101,37 @@ img {
     margin-bottom: 15px;
 }
 
-.social-media img, .logo-banco-galicia, .logo-mercado-pago {
-    width: 32px;
-    height: 32px;
+.logo-pequeno {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.pago-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pago-item h3 {
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.social-media img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
     transition: transform 0.3s;
 }
 
-.social-media img:hover, .logo-banco-galicia:hover, .logo-mercado-pago:hover {
+.social-media img:hover {
     transform: scale(1.1);
-}
-
-.receta {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.receta img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 footer {
