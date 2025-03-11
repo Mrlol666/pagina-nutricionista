@@ -110,6 +110,23 @@ img {
     transform: scale(1.1);
 }
 
+.receta {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.receta img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 footer {
     background: #5a3d99;
     color: white;
@@ -120,45 +137,6 @@ footer {
     font-weight: 500;
 }
 
-/* Nuevas reglas agregadas para ajustar el tamaño de las imágenes */
-.logo-pequeno {
-    width: 24px; /* Tamaño ajustado para que sean más pequeñas */
-    height: 24px; /* Tamaño ajustado para que sean más pequeñas */
-    transition: transform 0.3s;
-}
-
-.logo-pequeno:hover {
-    transform: scale(1.1);
-}
-
-/* Nuevas reglas agregadas para alinear las imágenes y el texto */
-#pago {
-    text-align: center; /* Centra todo el contenido de la sección "Realiza tu Pago" */
-}
-
-#informacion-pago {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.pago-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; 
-    text-align: center; 
-    margin: 10px 0; /* Espacio entre cada elemento */
-}
-
-.pago-item img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
-    margin-right: 5px; 
-    position: relative;
-    top: -5px; 
-}
 
 
 
