@@ -33,21 +33,20 @@
     
     <section id="informacion">
         <h2>Sobre mí <i class="fas fa-user-md"></i></h2>
-        <img src="imagenes/paola_paz.jpg" alt="Foto de Paola Paz" class="imagen-redonda">
+        <div class="info-container">
+            <div class="info-image">
+                <img src="imagenes/paola_paz.jpg" alt="Foto de Paola Paz" class="imagen-redonda">
+            </div>
+            <div class="info-audio">
+                <audio controls class="styled-audio">
+                    <source src="audio/descripcion.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </div>
+        
         <p>Dirección: Pte Campora 2680 Merlo Norte. Club AKUA</p>
         <p>Teléfono: <a href="https://wa.me/qr/TP5TU52KQZDSM1" target="_blank">+54 9 11 3517-0132</a></p>
-        <div id="mapa">
-            <h3>Ubicación <i class="fas fa-map-marker-alt"></i></h3>
-            <iframe
-                width="100%"
-                height="300"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed/v1/place?key=TU_API_KEY&q=[Dirección+del+consultorio]">
-            </iframe>
-        </div>
     </section>
     
     <section id="servicios">
@@ -106,6 +105,11 @@
     <script src="turnos.js" defer></script>
 </body>
 </html>
+
+
+
+
+
 
 
 
