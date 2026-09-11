@@ -1,33 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Configurar Mercado Pago
-    const mp = new MercadoPago("TU_PUBLIC_KEY", {
-        locale: "es-AR"
-    });
+    const header = document.querySelector(".site-header");
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.getElementById("menu-principal");
 
-    mp.checkout({
-        preference: {
-            id: "TU_PREFERENCE_ID"
-        },
-        render: {
-            container: "#boton-mercado-pago", // Donde se mostrará el botón de pago
-            label: "Pagar con Mercado Pago", // Texto del botón
-        }
-    });
+    if (header && toggle && nav) {
+        const icon = toggle.querySelector("i");
+        toggle.addEventListener("click", function () {
+            const open = header.classList.toggle("is-open");
+            toggle.setAttribute("aria-expanded", String(open));
+            if (icon) {
+                icon.classList.toggle("fa-bars", !open);
+                icon.classList.toggle("fa-times", open);
+            }
+        });
 
-    // Manejar la reserva de turnos
-    document.getElementById("form-turno").addEventListener("submit", function (event) {
-        event.preventDefault();
-        const nombre = document.getElementById("nombre").value;
-        const fecha = document.getElementById("fecha").value;
-        const hora = document.getElementById("hora").value;
-        
-        if (nombre && fecha && hora) {
-            alert(`Turno reservado para ${nombre} el ${fecha} a las ${hora}`);
-        } else {
-            alert("Por favor, completa todos los campos.");
-        }
+        nav.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                header.classList.remove("is-open");
+                toggle.setAttribute("aria-expanded", "false");
+                if (icon) {
+                    icon.classList.add("fa-bars");
+                    icon.classList.remove("fa-times");
+                }
+            });
+        });
+    }
+
+    document.querySelectorAll(".btn-copy").forEach(function (button) {
+        button.addEventListener("click", async function () {
+            const value = button.getAttribute("data-copy");
+            if (!value) {
+                return;
+            }
+
+            try {
+                await navigator.clipboard.writeText(value);
+                const original = button.textContent;
+                button.textContent = "Copiado";
+                setTimeout(function () {
+                    button.textContent = original;
+                }, 1600);
+            } catch (error) {
+                button.textContent = "No se pudo copiar";
+            }
+        });
     });
 });
-
-
-

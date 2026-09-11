@@ -6,170 +6,197 @@
     <title>NutriPao - Turnos Online</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/37d521e806.js" crossorigin="anonymous" defer></script>
     <meta name="description" content="Reserva de turnos online con Paola Paz, Licenciada en Nutrición.">
     <meta name="keywords" content="NutriPao, nutricionista, turnos online, Paola Paz, salud, nutrición">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <style>
-        .calendly-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-        .calendly-inline-widget {
-            width: 100% !important;
-            height: 700px !important;
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .info-container {
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="banner">
-            <img src="Imagenes/banner.jpg" alt="Banner de NutriPao" class="banner-img">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-name">NutriPao</span>
+                <span class="brand-role">Lic. Paola Paz</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <span class="sr-only">Abrir menú</span>
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav id="menu-principal">
+                <ul>
+                    <li><a href="#informacion">Sobre mí</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#consultorio">Consultorio</a></li>
+                    <li><a href="#turnos">Turnos</a></li>
+                    <li><a href="#pago">Pago</a></li>
+                    <li><a href="recetas.html">Recetas</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn-primary header-cta" href="#turnos">Reservar turno</a>
         </div>
-        <h1>NutriPao</h1>
-        <p>Paola Paz, Licenciada en Nutrición</p>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#informacion">Información</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#consultorio">Consultorio</a></li>
-            <li><a href="#turnos">Turnos</a></li>
-            <li><a href="#pago">Pago</a></li>
-            <li><a href="recetas.html">Recetas</a></li>
-        </ul>
-    </nav>
-    
-    <section id="informacion">
-        <h2>Sobre mí <i class="fas fa-user-md"></i></h2>
-        <div class="info-container">
-            <img src="Imagenes/paola_paz.jpg" alt="Foto de Paola Paz" class="imagen-redonda">
-        </div>
-        <p>Dirección: Pte Campora 2680 Merlo Norte. Club AKUA</p>
-        <p>Teléfono: <a href="https://wa.me/qr/TP5TU52KQZDSM1" target="_blank">+54 9 11 3517-0132</a></p>
-    </section>
-    
-    <section id="servicios">
-        <h2>Servicios <i class="fas fa-concierge-bell"></i></h2>
-    </section>
-    
-    <section id="consultorio">
-        <h2>El Consultorio <i class="fas fa-clinic-medical"></i></h2>
-        <img src="Imagenes/consultorio_interior.jpg" alt="Interior del consultorio" class="imagen-sombra imagen-ajustada">
-    </section>
-    
-    <section id="turnos">
-        <h2>Reserva tu Turno <i class="far fa-calendar-check"></i></h2>
-        <div class="calendly-container">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/paopaznutricion/45min"></div>
-        </div>
-    </section>
-    
-    <section id="pago">
-        <h2>Realiza tu Pago <i class="fas fa-credit-card"></i></h2>
-        <p>Nombre del Titular: Paola Gabriela Paz</p>
-        <div id="informacion-pago">
-            <div class="pago-item">
-                <img src="Imagenes/logo_banco_galicia.png" alt="Logo Banco Galicia" class="logo-pequeno">
-                <h3>Banco Galicia</h3>
+
+    <div class="brand-banner">
+        <img src="Imagenes/banner.jpg" alt="Banner de NutriPao, Consultorio de Nutrición de la Lic. Paola Paz" class="banner-img">
+    </div>
+
+    <main id="contenido">
+        <section id="informacion" class="hero">
+            <div class="hero-photo">
+                <img src="Imagenes/paola_paz.jpg" alt="Foto de Paola Paz">
             </div>
-            <p>CBU: 0070059730004100357755</p>
-            <p>ALIAS: Paopaz.nutricion</p>
-            
-            <div class="pago-item">
-                <img src="Imagenes/logo_mercado_pago.png" alt="Logo Mercado Pago" class="logo-pequeno">
-                <h3>Mercado Pago</h3>
+            <div class="hero-copy">
+                <p class="eyebrow">Consultorio de nutrición</p>
+                <h1>Paola Paz</h1>
+                <p class="hero-title">Licenciada en Nutrición</p>
+                <p class="hero-text">Atención personalizada en Club AKUA, Merlo Norte. Reservá tu consulta online y recibí un plan pensado para vos.</p>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        Pte. Cámpora 2680, Merlo Norte. Club AKUA
+                    </li>
+                    <li>
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <a href="https://wa.me/qr/TP5TU52KQZDSM1" target="_blank" rel="noopener noreferrer">+54 9 11 3517-0132</a>
+                    </li>
+                </ul>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#turnos">Reservar turno</a>
+                    <a class="btn btn-secondary" href="https://wa.me/qr/TP5TU52KQZDSM1" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+                </div>
             </div>
-            <p>CVU: 0000003100047741304921</p>
-            <p>Alias: Nutripao.paz</p>
-        </div>
-    </section>
-    
+        </section>
+
+        <section id="servicios">
+            <div class="section-heading">
+                <p class="eyebrow">Acompañamiento</p>
+                <h2>Servicios</h2>
+            </div>
+            <div class="servicios-layout">
+                <ul class="servicios-lista">
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <span>Plan de alimentación personalizado</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <span>Evaluación de la composición corporal</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <span>Nutrición deportiva</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <span>Nutrición clínica</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <span>Educación alimentaria</span>
+                    </li>
+                </ul>
+                <figure class="servicios-flyer">
+                    <img src="Imagenes/servicios_nutricion.jpg" alt="Servicios del consultorio de la Lic. Paola Paz">
+                </figure>
+            </div>
+        </section>
+
+        <section id="consultorio">
+            <div class="section-heading">
+                <p class="eyebrow">Dónde atendemos</p>
+                <h2>El consultorio</h2>
+            </div>
+            <div class="consultorio-layout">
+                <img src="Imagenes/consultorio_interior.jpg" alt="Interior del consultorio">
+                <div class="consultorio-card">
+                    <h3>Club AKUA</h3>
+                    <p>Pte. Cámpora 2680, Merlo Norte</p>
+                    <p>Un espacio pensado para tu consulta, con tiempo para evaluar, planificar y acompañarte en el proceso.</p>
+                    <a class="btn btn-primary" href="#turnos">Sacar turno</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="turnos">
+            <div class="section-heading">
+                <p class="eyebrow">Agenda online</p>
+                <h2>Reservá tu turno</h2>
+                <p>Elegí el día y el horario de tu consulta de 45 minutos. También podés escribir por WhatsApp si preferís coordinar por ahí.</p>
+            </div>
+            <div class="calendly-container">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/paopaznutricion/45min"></div>
+            </div>
+        </section>
+
+        <section id="pago">
+            <div class="section-heading">
+                <p class="eyebrow">Medios de pago</p>
+                <h2>Realizá tu pago</h2>
+                <p>Titular: Paola Gabriela Paz</p>
+            </div>
+            <div class="pago-grid">
+                <article class="pago-card">
+                    <div class="pago-item">
+                        <img src="Imagenes/logo_banco_galicia.png" alt="Logo Banco Galicia" class="logo-pequeno">
+                        <h3>Banco Galicia</h3>
+                    </div>
+                    <div class="dato-pago">
+                        <span>CBU</span>
+                        <p>0070059730004100357755</p>
+                        <button type="button" class="btn-copy" data-copy="0070059730004100357755">Copiar</button>
+                    </div>
+                    <div class="dato-pago">
+                        <span>Alias</span>
+                        <p>Paopaz.nutricion</p>
+                        <button type="button" class="btn-copy" data-copy="Paopaz.nutricion">Copiar</button>
+                    </div>
+                </article>
+                <article class="pago-card">
+                    <div class="pago-item">
+                        <img src="Imagenes/logo_mercado_pago.png" alt="Logo Mercado Pago" class="logo-pequeno">
+                        <h3>Mercado Pago</h3>
+                    </div>
+                    <div class="dato-pago">
+                        <span>CVU</span>
+                        <p>0000003100047741304921</p>
+                        <button type="button" class="btn-copy" data-copy="0000003100047741304921">Copiar</button>
+                    </div>
+                    <div class="dato-pago">
+                        <span>Alias</span>
+                        <p>Nutripao.paz</p>
+                        <button type="button" class="btn-copy" data-copy="Nutripao.paz">Copiar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 NutriPao - Todos los derechos reservados</p>
-        <div class="social-media">
-            <a href="https://www.instagram.com/nutripao.paz?igsh=Y2hzaWowZWp2b3Y2" target="_blank">
-                <img src="Imagenes/instagram-icon.png" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com/share/1BdMViVxf8/" target="_blank">
-                <img src="Imagenes/facebook-icon.png" alt="Facebook">
-            </a>
+        <div class="footer-inner">
+            <div>
+                <p class="brand-name">NutriPao</p>
+                <p>Lic. Paola Paz · Nutrición</p>
+            </div>
+            <div>
+                <p>Pte. Cámpora 2680, Merlo Norte</p>
+                <p>Club AKUA</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/nutripao.paz?igsh=Y2hzaWowZWp2b3Y2" target="_blank" rel="noopener noreferrer">
+                    <img src="Imagenes/instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/share/1BdMViVxf8/" target="_blank" rel="noopener noreferrer">
+                    <img src="Imagenes/facebook-icon.png" alt="Facebook">
+                </a>
+            </div>
         </div>
+        <p class="copyright">&copy; 2026 NutriPao - Todos los derechos reservados</p>
     </footer>
-    
+
     <script src="script.js" defer></script>
-    <script src="turnos.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

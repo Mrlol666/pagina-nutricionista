@@ -5,33 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetas - NutriPao</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/37d521e806.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Recetas Saludables</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-            </ul>
-        </nav>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-name">NutriPao</span>
+                <span class="brand-role">Lic. Paola Paz</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <span class="sr-only">Abrir menú</span>
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav id="menu-principal">
+                <ul>
+                    <li><a href="index.html#informacion">Sobre mí</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#consultorio">Consultorio</a></li>
+                    <li><a href="index.html#turnos">Turnos</a></li>
+                    <li><a href="index.html#pago">Pago</a></li>
+                    <li><a href="recetas.html" aria-current="page">Recetas</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn-primary header-cta" href="index.html#turnos">Reservar turno</a>
+        </div>
     </header>
 
-    <section id="recetas">
-        <h2>Nuestras Recetas</h2>
-        <p>Pronto vas a encontrar acá recetas saludables, cada una con su foto y su texto.</p>
-        <div class="recetas-lista">
-            <!--
-            <article class="receta">
-                <img src="Imagenes/nombre.jpg" alt="Nombre de la receta">
-                <h3>Nombre de la receta</h3>
-                <p>Acá va el texto de la receta.</p>
-            </article>
-            -->
-        </div>
-    </section>
+    <main id="contenido" class="page-recetas">
+        <section id="recetas">
+            <div class="section-heading">
+                <p class="eyebrow">Próximamente</p>
+                <h1>Recetas saludables</h1>
+                <p>Pronto vas a encontrar acá recetas saludables, cada una con su foto y su texto.</p>
+            </div>
+            <div class="recetas-lista">
+                <!--
+                <article class="receta">
+                    <img src="Imagenes/nombre.jpg" alt="Nombre de la receta">
+                    <h3>Nombre de la receta</h3>
+                    <p>Acá va el texto de la receta.</p>
+                </article>
+                -->
+            </div>
+            <a class="btn btn-secondary" href="index.html">Volver al inicio</a>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 NutriPao - Todos los derechos reservados</p>
+        <div class="footer-inner">
+            <div>
+                <p class="brand-name">NutriPao</p>
+                <p>Lic. Paola Paz · Nutrición</p>
+            </div>
+            <div>
+                <p>Pte. Cámpora 2680, Merlo Norte</p>
+                <p>Club AKUA</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/nutripao.paz?igsh=Y2hzaWowZWp2b3Y2" target="_blank" rel="noopener noreferrer">
+                    <img src="Imagenes/instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/share/1BdMViVxf8/" target="_blank" rel="noopener noreferrer">
+                    <img src="Imagenes/facebook-icon.png" alt="Facebook">
+                </a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 NutriPao - Todos los derechos reservados</p>
     </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
