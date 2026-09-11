@@ -142,6 +142,28 @@ img:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.recetas-lista {
+    display: grid;
+    gap: 28px;
+    margin-top: 20px;
+}
+
+.receta {
+    text-align: left;
+}
+
+.receta img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    margin-top: 0;
+}
+
+.receta h3 {
+    color: #5a3d99;
+    margin: 12px 0 8px;
+}
+
 .imagen-redonda {
     border-radius: 50%;
     width: 160px;
