@@ -385,15 +385,14 @@ h2 {
 .modal-card {
     position: relative;
     z-index: 1;
-    width: min(380px, 100%);
-    max-width: 380px;
-    max-height: min(78vh, 520px);
+    width: min(560px, 100%);
+    max-height: min(78vh, 560px);
     overflow: auto;
-    min-height: 220px;
+    min-height: 280px;
     background: var(--white);
     border-radius: 20px;
     box-shadow: 0 24px 60px rgba(44, 42, 50, 0.22);
-    padding: 32px 24px 28px;
+    padding: 36px 28px 32px;
 }
 
 .modal[hidden] {
@@ -787,6 +786,16 @@ footer a {
     .consultorio-card .btn {
         width: 100%;
         min-height: 46px;
+    }
+
+    .modal {
+        padding: 16px;
+    }
+
+    .modal-card {
+        min-height: 220px;
+        max-height: min(78vh, 520px);
+        padding: 32px 24px 28px;
     }
 
     .servicios-flyer {
