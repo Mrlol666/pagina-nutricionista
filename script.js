@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         modal.hidden = true;
+        document.documentElement.classList.remove("modal-open");
         document.body.classList.remove("modal-open");
 
         if (lastTrigger) {
@@ -70,15 +71,92 @@ document.addEventListener("DOMContentLoaded", function () {
 
         lastTrigger = trigger;
         modal.hidden = false;
+        document.documentElement.classList.add("modal-open");
         document.body.classList.add("modal-open");
         modal.querySelector(".modal-close").focus();
     }
 
     servicioTriggers.forEach(function (trigger) {
+        trigger.addEventListener("pointerdown", function () {
+            trigger.classList.add("is-pressed");
+        });
+
+        ["pointerup", "pointerleave", "pointercancel"].forEach(function (eventName) {
+            trigger.addEventListener(eventName, function () {
+                window.setTimeout(function () {
+                    trigger.classList.remove("is-pressed");
+                }, 160);
+            });
+        });
+
         trigger.addEventListener("click", function () {
             openModal(trigger);
         });
     });
+
+    const serviciosItems = document.querySelectorAll(".servicios-lista li");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (serviciosItems.length) {
+        if (reduceMotion) {
+            serviciosItems.forEach(function (item) {
+                item.classList.add("is-inview");
+            });
+        } else {
+            let cascadeFrame = 0;
+
+            const updateServiciosCascade = function () {
+                if (document.body.classList.contains("modal-open")) {
+                    return;
+                }
+
+                const viewport = window.innerHeight;
+                const headerSpace = 80;
+                const effectLine = viewport * 0.58;
+                let currentIndex = -1;
+
+                serviciosItems.forEach(function (item, index) {
+                    const rect = item.getBoundingClientRect();
+                    const gonePastTop = rect.bottom <= headerSpace;
+                    const stillBelowFold = rect.top >= viewport - 8;
+
+                    if (gonePastTop || stillBelowFold) {
+                        item.classList.remove("is-inview", "is-cascade");
+                        return;
+                    }
+
+                    if (rect.top <= effectLine) {
+                        item.classList.add("is-inview");
+                        currentIndex = index;
+                    } else {
+                        item.classList.remove("is-inview", "is-cascade");
+                    }
+                });
+
+                serviciosItems.forEach(function (item, index) {
+                    item.classList.toggle(
+                        "is-cascade",
+                        item.classList.contains("is-inview") && index === currentIndex
+                    );
+                });
+            };
+
+            const onScrollOrResize = function () {
+                if (cascadeFrame) {
+                    return;
+                }
+
+                cascadeFrame = window.requestAnimationFrame(function () {
+                    cascadeFrame = 0;
+                    updateServiciosCascade();
+                });
+            };
+
+            window.addEventListener("scroll", onScrollOrResize, { passive: true });
+            window.addEventListener("resize", onScrollOrResize);
+            updateServiciosCascade();
+        }
+    }
 
     if (modal) {
         modal.querySelectorAll("[data-close-modal]").forEach(function (closer) {

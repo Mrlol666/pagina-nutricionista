@@ -18,6 +18,12 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+html.modal-open,
+body.modal-open {
+    overflow: hidden;
 }
 
 body {
@@ -300,7 +306,7 @@ h2 {
 
 .servicios-lista {
     list-style: none;
-    padding: 0;
+    padding: 8px 10px;
     margin: 0;
     display: grid;
     gap: 12px;
@@ -308,6 +314,21 @@ h2 {
 
 .servicios-lista li {
     margin: 0;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.servicios-lista li.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.servicios-lista li.is-cascade .servicio-trigger {
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.16), rgba(52, 152, 219, 0.12));
+    color: var(--purple);
+    transform: scale(1.03);
+    box-shadow: 0 10px 22px rgba(90, 61, 153, 0.12);
 }
 
 .servicio-trigger {
@@ -324,11 +345,25 @@ h2 {
     color: inherit;
     text-align: left;
     cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.servicio-trigger:hover,
+.servicio-trigger:active,
+.servicio-trigger.is-pressed,
 .servicio-trigger:focus-visible {
-    background: #ece6f4;
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.16), rgba(52, 152, 219, 0.12));
+    color: var(--purple);
+    transform: scale(1.03);
+    box-shadow: 0 10px 22px rgba(90, 61, 153, 0.12);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .servicio-trigger:hover {
+        background: linear-gradient(135deg, rgba(142, 68, 173, 0.16), rgba(52, 152, 219, 0.12));
+        color: var(--purple);
+        transform: scale(1.03);
+        box-shadow: 0 10px 22px rgba(90, 61, 153, 0.12);
+    }
 }
 
 .servicios-lista i {
@@ -342,6 +377,23 @@ h2 {
     display: grid;
     place-items: center;
     padding: 20px;
+    width: 100vw;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.modal-card {
+    position: relative;
+    z-index: 1;
+    width: min(380px, 100%);
+    max-width: 380px;
+    max-height: min(78vh, 520px);
+    overflow: auto;
+    min-height: 220px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(44, 42, 50, 0.22);
+    padding: 32px 24px 28px;
 }
 
 .modal[hidden] {
@@ -352,17 +404,6 @@ h2 {
     position: absolute;
     inset: 0;
     background: rgba(44, 42, 50, 0.45);
-}
-
-.modal-card {
-    position: relative;
-    z-index: 1;
-    width: min(560px, 100%);
-    min-height: 280px;
-    background: var(--white);
-    border-radius: 20px;
-    box-shadow: 0 24px 60px rgba(44, 42, 50, 0.22);
-    padding: 36px 28px 32px;
 }
 
 .modal-close {
@@ -392,10 +433,6 @@ h2 {
 
 .modal-panel.is-active {
     display: block;
-}
-
-body.modal-open {
-    overflow: hidden;
 }
 
 .servicios-flyer img,
@@ -793,7 +830,18 @@ footer a {
         scroll-behavior: auto;
     }
 
-    .btn:hover {
+    .btn:hover,
+    .servicio-trigger:hover,
+    .servicio-trigger:active,
+    .servicio-trigger.is-pressed,
+    .servicio-trigger:focus-visible,
+    .servicios-lista li.is-cascade .servicio-trigger {
         transform: none;
+    }
+
+    .servicios-lista li {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
