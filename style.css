@@ -399,7 +399,7 @@ body.modal-open {
 }
 
 .servicios-flyer img,
-.consultorio-layout img {
+.consultorio-foto {
     width: 100%;
     border-radius: 18px;
     object-fit: cover;
@@ -407,13 +407,60 @@ body.modal-open {
 
 .consultorio-layout {
     grid-template-columns: 1.3fr 0.9fr;
-    align-items: center;
+    align-items: stretch;
+}
+
+.consultorio-foto {
+    height: 100%;
+    min-height: 320px;
 }
 
 .consultorio-card {
     background: var(--bg);
     border-radius: 18px;
     padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.consultorio-direccion {
+    color: var(--purple);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.consultorio-direccion:hover {
+    text-decoration: underline;
+}
+
+.mapa-enlace {
+    position: relative;
+    display: block;
+    margin: 8px 0 18px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--white);
+}
+
+.mapa-enlace iframe {
+    width: 100%;
+    height: 210px;
+    border: 0;
+    pointer-events: none;
+}
+
+.mapa-etiqueta {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    background: var(--white);
+    color: var(--purple);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(90, 61, 153, 0.16);
 }
 
 .calendly-container {
@@ -625,6 +672,14 @@ footer a {
         align-items: start;
     }
 
+    .consultorio-foto {
+        min-height: 260px;
+    }
+
+    .mapa-enlace iframe {
+        height: 190px;
+    }
+
     .footer-inner {
         grid-template-columns: 1fr 1fr;
     }
@@ -669,6 +724,21 @@ footer a {
     .hero-photo img {
         height: 260px;
         border-radius: 20px;
+    }
+
+    .consultorio-foto {
+        min-height: 220px;
+    }
+
+    .mapa-enlace iframe {
+        height: 180px;
+    }
+
+    .mapa-etiqueta {
+        padding: 10px 14px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
     }
 
     .hero-actions,
