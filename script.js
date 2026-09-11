@@ -24,6 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 1024) {
+                header.classList.remove("is-open");
+                toggle.setAttribute("aria-expanded", "false");
+                if (icon) {
+                    icon.classList.add("fa-bars");
+                    icon.classList.remove("fa-times");
+                }
+            }
+        });
     }
 
     document.querySelectorAll(".btn-copy").forEach(function (button) {
