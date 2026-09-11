@@ -79,24 +79,34 @@
             <div class="servicios-layout">
                 <ul class="servicios-lista">
                     <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <span>Plan de alimentación personalizado</span>
+                        <button type="button" class="servicio-trigger" data-servicio="plan">
+                            <i class="fas fa-check" aria-hidden="true"></i>
+                            <span>Plan de alimentación personalizado</span>
+                        </button>
                     </li>
                     <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <span>Evaluación de la composición corporal</span>
+                        <button type="button" class="servicio-trigger" data-servicio="composicion">
+                            <i class="fas fa-check" aria-hidden="true"></i>
+                            <span>Evaluación de la composición corporal</span>
+                        </button>
                     </li>
                     <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <span>Nutrición deportiva</span>
+                        <button type="button" class="servicio-trigger" data-servicio="deportiva">
+                            <i class="fas fa-check" aria-hidden="true"></i>
+                            <span>Nutrición deportiva</span>
+                        </button>
                     </li>
                     <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <span>Nutrición clínica</span>
+                        <button type="button" class="servicio-trigger" data-servicio="clinica">
+                            <i class="fas fa-check" aria-hidden="true"></i>
+                            <span>Nutrición clínica</span>
+                        </button>
                     </li>
                     <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <span>Educación alimentaria</span>
+                        <button type="button" class="servicio-trigger" data-servicio="educacion">
+                            <i class="fas fa-check" aria-hidden="true"></i>
+                            <span>Educación alimentaria</span>
+                        </button>
                     </li>
                 </ul>
                 <figure class="servicios-flyer">
@@ -196,6 +206,21 @@
         </div>
         <p class="copyright">&copy; 2026 NutriPao - Todos los derechos reservados</p>
     </footer>
+
+    <div class="modal" id="modal-servicios" hidden>
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-servicio-titulo">
+            <button type="button" class="modal-close" data-close-modal aria-label="Cerrar">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <h3 id="modal-servicio-titulo"></h3>
+            <div class="modal-panel" data-servicio="plan"></div>
+            <div class="modal-panel" data-servicio="composicion"></div>
+            <div class="modal-panel" data-servicio="deportiva"></div>
+            <div class="modal-panel" data-servicio="clinica"></div>
+            <div class="modal-panel" data-servicio="educacion"></div>
+        </div>
+    </div>
 
     <script src="script.js" defer></script>
 </body>
